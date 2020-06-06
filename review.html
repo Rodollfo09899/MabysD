@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to Maby's!</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<header>
+
+<a href="index.html">
+<img border="0" alt="Home" src="logos/Logo1.png" class="responsive">
+</a>
+
+<ul class="topnav">
+  <li><a href="index.html">Home</a></li>
+  <li><a class="active" href="review.html">Reviews</a></li>
+  <li><a href="book.html">Book Now</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  <li class="right"><a href="about.html">About Us</a></li>
+</ul>
+
+</header>
+
+<body>
+
+<div class="textbox">
+  <center><h2>Customer Reviews</h2></center> <hr>
+<h4>Our clients are satisfied with our hard work let you be one of them.
+</h4>
+  <h7>Resize the browser window to see the effect.</h4>
+  	<br><br>
+  	<center><a href="#writeReview">Write a Review</a></center>
+</div>
+<div class="textboxNoButton">
+<h4><p> Rating base on 500 clients</h4></p>
+<a href="review.html">
+<img src="pics/IMG_4920.JPG" alt="Customer Image" width="10%">
+</a>
+</center>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<div class="textboxNoButton" id="writeReview">
+  <center><h2>Write a Review!</h2> <hr> <h3>Let us know how we did</h3>
+
+  <form action="" method="POST">
+<table class="review">
+  <tr>
+    <td><label for="name">Name:</label></th>
+    <td><input type="text" placeholder="Enter Full Name" name="name" required></th> 
+  </tr>
+  <tr>
+	<td><label for="anon">Hide Last Name: </label></th>
+    <td><input name="anon" type="checkbox"></td>
+  </tr>
+  <tr>
+    <td><label for="date">Date of Service:</label></td>
+    <td><input type="date" placeholder="Select Date" name="date" required><br></td>
+  </tr>
+  <tr>
+    <td><label for="jType">Job Type:</label></td>
+    <td><input type="jType" placeholder="List Services Provided" name="jType" required></td>
+  </tr>
+  <tr>
+    <td><label for="files">Upload Pictures:</label></td>
+    <td><input type="file" id="files" name="files" multiple accept="image/*"></td>
+  </tr>
+
+</table>
+<table>
+	 <tr>
+  	<div class="inputBox">
+    <p>How did we do? Enter Text: </p><div class="inputText" contenteditable="true"></div><br>
+</div>
+ </tr>
+</table>
+<table>
+	<tr class="star"><b>Click a Star Rating to Submit: </b>
+  <input type="hidden" name="rating[post_id]" value="3">
+  <button type="submit" name="rating[rating]" value="5">&#9733;</button>
+  <button type="submit" name="rating[rating]" value="4">&#9733;</button>
+  <button type="submit" name="rating[rating]" value="3">&#9733;</button>
+  <button type="submit" name="rating[rating]" value="2">&#9733;</button>
+  <button type="submit" name="rating[rating]" value="1">&#9733;</button>
+
+ </tr>
+</table>
+<hr>
+    <p>Haven't experienced our excellent service yet? <font> <a href=book.html>Book Now</a> <br> <br> </font>Or rather give us a call? <font> <a href=contact.html>Contact Us</a> </font></p>
+</center>
+</form>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+</body>
+<footer>
+      <center>
+<div class="socialmedia">
+<table>
+  <tr>
+    <th>
+<a href="https://www.facebook.com/mabysDomesticServices/"><img border="0" alt="FaceBook" src="logos/Facebook-Logo.png" class="logo">
+<p><b>@mabysDomesticServices</b><p>
+</a>
+</th>
+<th>
+<a href="https://twitter.com/s_domestic"> <img border="0" alt="twitter" src="logos/Color-Twitter-Logo.png" class="logo">
+<p><b>@s_domestic</b><p>
+<a>
+</th>
+    <th>
+<a href="https://www.instagram.com/mabys_domestic_services/"><img border="0" alt="Instagram" src="logos/Instagram-Logo.png" class="logo2">
+<p><b>@mabys_domestic_services</b><p>
+</a>
+</th> 
+  </tr>
+</table>
+</div>
+</center>
+  <small>Copyright &copy; 2020 Maby's Domestic Services. All Rights Reserved</small>
+</footer>
+</html>
