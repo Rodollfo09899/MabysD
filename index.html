@@ -9,8 +9,90 @@
   <meta charset="UTF-8">
   <meta name="description" content="San Francisco Bay Area Domestic Cleaning Service">
   <meta name="keywords" content="Maby's Domestic Services, Maby's, Mabi's, domestic services, domestic, services, cleaning, cleaning service, maid, maid service, sanitation, disinfect, San Francisco, Bay Area, spanish, habla espanol">
-  <meta http-equiv="refresh" content="30">
-  <meta name="author" content="Jay Jaber">
+  <!-- <meta http-equiv="refresh" content="30">-->
+  <meta name="author" content="Jay Jaber, Jasson Enriquez">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "House Cleaners",
+      "image": [       "https://production-next-images-cdn.thumbtack.com/i/345006381327712261/width/2200.jpeg",
+        "https://production-next-images-cdn.thumbtack.com/i/344871359121629186/width/2200.jpeg",
+        "https://production-next-images-cdn.thumbtack.com/i/345223760273276957/width/2200.jpeg"
+       ],
+      "@id": "http://mabysdomesticservices.com",
+      "name": "Maby's Domestic Services",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "128 Accacia St",
+        "addressLocality": "Daly City",
+        "addressRegion": "DC",
+        "postalCode": "94014",
+        "addressCountry": "US"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5.0",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Jay Jaber",
+          "name": "Jasson Enriquez"
+        }
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.687923,
+        "longitude": -122.470207
+      },
+      "url": "https://mabysdomesticservices.com",
+      "telephone": "+4157569023",
+      "priceRange": "$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": “8:00",
+          "closes": "18:00"
+        }
+              ]
+    }
+    </script>
+
+<script src="./js/script.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBvOgNNyPWNqQD4SPHEJorhfGO6YnoCVKg",
+    authDomain: "mabysdomesticservices.firebaseapp.com",
+    databaseURL: "https://mabysdomesticservices.firebaseio.com",
+    projectId: "mabysdomesticservices",
+    storageBucket: "mabysdomesticservices.appspot.com",
+    messagingSenderId: "502519585580",
+    appId: "1:502519585580:web:3ea6a38f41ebe7c5f6aa89",
+    measurementId: "G-06VGCPLDQG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </head>
 
 <header>
@@ -59,11 +141,29 @@
   <h4>Resize the browser window to see the effect.</h4>
 </div>
 
-<script>
-function myFunction() {
-  alert("We are still under full operation and continue to serve the bay are during our lockdown. This guidance provides recommendations on the cleaning and disinfection of households where persons under investigation (PUI) or those with confirmed COVID-19 reside or may be in self- isolation. It is aimed at limiting the survival of the virus in the environments. These recommendations will be updated if additional information becomes available.  These guidelines are focused on household settings and are meant for the general public.  Cleaning refers to the removal of germs, dirt, and impurities from surfaces. It does not kill germs, but by removing them, it lowers their numbers and the risk of spreading infection. Disinfecting refers to using chemicals, for example, EPA-registered disinfectants, to kill germs on surfaces. This process does not necessarily clean dirty surfaces or remove germs, but by killing germs on a surface after cleaning, it can further lower the risk of spreading infection.");
-}
-</script>
+       <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title" style="color: white;">Thank you for reading this article</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Please Enter your email</p>
+                  <input type="text" id="email" style="width:100%">
+                  <br/>
+                  <div class="adsense-inject">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" onclick="saveSubscribe()">Subscribe</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+          
+            </div>
+        </div>
 
 </body>
 <footer>
