@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact form example">
+  <title>Contact Form Example</title>
+</head>
+
+<body>
+  <h2 class="content-head is-center">Contact Us!</h2>
+  <aside>
+       <p>
+           We would <em>love</em> to hear from you! </p>
+           <p>Please use the <b><em>Contact Form</em></b>
+           to send us a message.
+       </p>
+   </aside>
+
+<!-- START HERE -->
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <!-- Style The Contact Form How Ever You Prefer -->
+   <link rel="stylesheet" href="style.css">
+
+  <form class="gform pure-form pure-form-stacked" method="POST" data-email="mabisdomesticserv101@gmail.com"
+  action= "https://script.google.com/macros/s/AKfycbxidu5Hs-kFCU0bNZSKGbgon8wptsobGafPec9XiV_MUzvpxHQ/exec">
+    <!-- change the form action to your script url -->
+
+<div style="display:none" class="thankyou_message">
+ <!-- You can customize the thankyou message by editing the code below -->
+ <h2><em>Thanks</em> for contacting us! We will get back to you soon!
+ </h2>
+</div>
+
+    <div class="form-elements">
+      <fieldset class="pure-group">
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Enter Full Name" name="name" required>
+      </fieldset>
+
+          <div class="form-elements">
+      <fieldset class="pure-group">
+        <label for="phone">Phone Number or Email:</label>
+        <input type="text" placeholder="Enter Contact Info" name="phone" required>
+      </fieldset>
+
+          <div class="form-elements">
+      <fieldset class="pure-group">
+        <label for="date">Date:</label>
+        <input type="date" placeholder="Select Date" name="date" required>
+      </fieldset>
+
+
+
+
+    <div class="form-elements">
+      <fieldset class="pure-group">
+        <label for="time">Time:</label>
+        <input type="time" placeholder="Select Time" name="time" required>
+      </fieldset>
+
+      <fieldset class="pure-group">
+        <label for="rooms">Number of Rooms:</label>
+        <input type="number" placeholder="1" name="rooms" min="0" max="100" step="1">
+      </fieldset>
+
+      <fieldset class="pure-group">
+        <label for="comments">Message: </label>
+        <textarea id=333"comments" name="comments" rows="10"
+        placeholder="Additional Comments..."></textarea>
+      </fieldset>
+
+      <fieldset class="pure-group honeypot-field">
+        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+        <input id="honeypot" type="text" name="honeypot" value="" />
+      </fieldset>
+
+      <button class="button-success pure-button button-xlarge">
+        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+    </div>
+
+  </form>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" src="js/form-submission-handler.js"></script>
+<!-- END -->
+
+</body>
+</html>

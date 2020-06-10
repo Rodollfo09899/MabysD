@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/style.css"/>
 <script src="./js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <meta charset="UTF-8">
   <meta name="description" content="San Francisco Bay Area Domestic Cleaning Service">
@@ -69,30 +70,6 @@
               ]
     }
     </script>
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBvOgNNyPWNqQD4SPHEJorhfGO6YnoCVKg",
-    authDomain: "mabysdomesticservices.firebaseapp.com",
-    databaseURL: "https://mabysdomesticservices.firebaseio.com",
-    projectId: "mabysdomesticservices",
-    storageBucket: "mabysdomesticservices.appspot.com",
-    messagingSenderId: "502519585580",
-    appId: "1:502519585580:web:3ea6a38f41ebe7c5f6aa89",
-    measurementId: "G-06VGCPLDQG"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
 </head>
 
 <header>
@@ -107,7 +84,8 @@
   <li><a href="book.html">Book Now</a></li>
   <li><a href="contact.html">Contact Us</a></li>
   <li class="right"><a href="about.html">About Us</a></li>
-  <li class="right"><center><input id="search" type="text" placeholder="Search Site"></li></center>
+  <li class="right"><center><div><script async src="https://cse.google.com/cse.js?cx=009009733495483171328:yqtvv2a9eua"></script>
+<div class="gcse-search"></div></div></center></li>
 </ul>
 
 </header>
@@ -165,7 +143,61 @@
             </div>
         </div>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBvOgNNyPWNqQD4SPHEJorhfGO6YnoCVKg",
+    authDomain: "mabysdomesticservices.firebaseapp.com",
+    databaseURL: "https://mabysdomesticservices.firebaseio.com",
+    projectId: "mabysdomesticservices",
+    storageBucket: "mabysdomesticservices.appspot.com",
+    messagingSenderId: "502519585580",
+    appId: "1:502519585580:web:3ea6a38f41ebe7c5f6aa89",
+    measurementId: "G-06VGCPLDQG"
+  };
+
+function validateEmail(email) 
+{
+ return true;
+}
+
+      function saveSubscribe(){
+        var id = $("#email").val();
+
+        if(!validateEmail(id)){
+            alert("Enter valid email");
+        }
+        else{
+            var timestamp = new Date().valueOf();
+            var obj = {};
+            obj[timestamp] = id;
+
+            firebase.database().ref('/').update(obj, function(error) {
+                if (error) {
+                    alert("Invalid email");
+                } else {
+                    $("#myModal").modal("hide");
+                    alert("Thank you for subscribing and happy learning");
+                }
+            });
+           
+        }
+    }
+</script>
+
 </body>
+
 <footer>
       <center>
 <div class="socialmedia">
