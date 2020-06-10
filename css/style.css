@@ -193,3 +193,7 @@ button:hover + button + button + button + button {
 button:hover{
   color: black !important;
 }
+
+form {
+    background-color: #dfdbe5;
+}
