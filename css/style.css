@@ -195,24 +195,26 @@ button:hover{
 }
 
 .form-elements {
-  background-color: #dfdbe5;
+  background-color: #eceaf0;
   border-radius: 0.5em;
-  border: 0.1em solid white;
+  padding-bottom: 1em;
+  border: 0.1em solid silver;
+}
+
+.form-elements input:focus, .form-elements textarea:focus {
+      outline: none !important;
+    border: 2px solid darkred;
+    box-shadow: 0 0 10px silver;
 }
 
 .pure-group {
     border: none;
-    border-bottom: 0.1em solid silver;
 }
 
 button {
    padding: 1em;
     margin: 0 auto;
     display: block;
-}
-
-.form-elements {
-  border: 0.1em solid silver;
 }
 
 aside a {
@@ -228,4 +230,8 @@ aside a:hover {
   background-color: darkred; 
   text-decoration: underline;
   cursor: pointer;
+}
+
+textarea {
+  width: 50%;
 }
