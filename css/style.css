@@ -239,3 +239,11 @@ aside a:hover {
 textarea {
   width: 50%;
 }
+
+#a{
+ display:none;
+}
+
+#b:hover {
+  display: block;
+}
