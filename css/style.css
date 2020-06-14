@@ -168,6 +168,10 @@ ul.topnav input {
   width: 45%;
 }
 
+.pics {
+  width: 100%;
+}
+
 .star form {
   width: 100px;
 }
