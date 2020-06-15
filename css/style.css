@@ -216,7 +216,7 @@ button:hover{
 }
 
 button {
-   padding: 1em;
+   padding: 0.25em;
     margin: 0 auto;
     display: block;
 }
@@ -240,10 +240,23 @@ textarea {
   width: 50%;
 }
 
-#a{
- display:none;
+.doNotHide div {
+    display: block !important;
 }
 
-#b:hover {
-  display: block;
+.hide div {
+    display: none;
+    background-color: #eceaf0;
+      border-radius: 0.5em;
+  padding: 1em;
+  border: 0.1em solid silver;
+
+}
+
+.hide div:target {
+    display: block;
+}
+
+.aName a:active {
+
 }
