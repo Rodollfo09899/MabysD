@@ -153,19 +153,6 @@ ul.topnav input {
         padding: 5px;
 }
 
-@media screen and (max-width: 600px) {
-  ul.topnav li.right,
-  ul.topnav li.rightActive, 
-  ul.topnav li,
-  ul.topnav input {float: none;}
-  .logo {max-height: 3em;
-  width: auto;}
-  .logo2 {max-height: 3.75em;
-  width: auto;}
-  a {font-size: 0.5em;}
-  .inputBox div {width: 75%;}
-}
-
 .smallPics {
   width: 45%;
     border-radius: 0.25em;
@@ -295,4 +282,19 @@ border-radius: 0.25em;
   height: auto;
   max-height: 100%;
   overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li.rightActive, 
+  ul.topnav li,
+  ul.topnav input {float: none;}
+  .logo {max-height: 3em;
+  width: auto;}
+  .logo2 {max-height: 3.75em;
+  width: auto;}
+  a {font-size: 0.5em;}
+  .inputBox div {width: 75%;}
+  .carousel, .carouselRight {
+max-width: 50%;}
 }
