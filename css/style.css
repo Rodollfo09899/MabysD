@@ -84,11 +84,13 @@ margin-top: 0.5em;
 margin-bottom: 0.5em;
 max-height: 4em;
   width: auto;
+  border-radius: 0.25em;
 }
 
 .logo2{
 max-height: 5em;
   width: auto;
+  border-radius: 0.25em;
 }
 
 .checked {
@@ -166,10 +168,12 @@ ul.topnav input {
 
 .smallPics {
   width: 45%;
+    border-radius: 0.25em;
 }
 
 .pics {
   width: 100%;
+    border-radius: 0.25em;
 }
 
 .star form {
@@ -257,6 +261,32 @@ textarea {
     display: block;
 }
 
+.first, .second {
+  &__image {
+    width: 250px;
+    float: left;
+  }
+  &__text {
+    display: inline;
+  }
+}
+
 .aName a:active {
 
+}
+
+.carousel {
+max-width: 25%;
+max-height: 100%;
+float: left;
+padding-right: 1em;
+border-radius: 0.25em;
+}
+
+.carouselRight {
+max-width: 25%;
+max-height: 100%;
+float: right;
+padding-right: 1em;
+border-radius: 0.25em;
 }
