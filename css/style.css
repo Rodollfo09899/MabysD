@@ -287,6 +287,12 @@ border-radius: 0.25em;
 max-width: 25%;
 max-height: 100%;
 float: right;
-padding-right: 1em;
+padding-left: 1em;
 border-radius: 0.25em;
+}
+
+.image-txt-container {
+  height: auto;
+  max-height: 100%;
+  overflow: hidden;
 }
