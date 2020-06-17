@@ -299,6 +299,9 @@ border-radius: 0.25em;
   ul.topnav li,
   ul.topnav input {float: none;
   }
+  ul.topnav li a {
+    font-size: 1em;
+  }
   a {
     font-size: 1em;}
   .logo {max-height: 3em;
