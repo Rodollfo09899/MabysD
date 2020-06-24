@@ -140,6 +140,9 @@ ul.topnav li a:not(.active):hover {background-color: #111;}
 
 ul.topnav li a.active {background-color: #8B0000;}
 
+ul.topnav li a.call {background-color: slateblue;}
+ul.topnav li a.call:hover {background-color: darkslateblue;}
+
 ul.topnav li.right {float: right;}
 ul.topnav li.rightActive {float: right;
 background-color: #8B0000;
