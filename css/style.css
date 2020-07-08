@@ -33,7 +33,6 @@ cursor: pointer;
   padding: 0.25em;
   position: relative;
   text-decoration: none;
-  word-break: break-all;
 }
 
 .textbox a:hover {
