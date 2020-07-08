@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/style.css"/>
 <script src="./js/script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <meta charset="UTF-8">
   <meta name="description" content="San Francisco Bay Area Domestic Cleaning Maid Service for home and office.">
@@ -68,27 +68,184 @@
         }
               ]
     }
-    </script></head>
+    </script>
+
+<style>
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 0.25em;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #8B0000;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: black !important;
+  padding: 14px 16px;
+  background-color: silver !important;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover:not(.active), .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.topnav a.call {background-color: #6a5acd;}
+.topnav a.call:hover {background-color: #483d8b;}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+</style>
+
+  </head>
 
 <header>
 
 <a href="index.html">
-<img border="0" alt="Home" src="logos/Logo1.png" class="responsive">
+<img border="0" alt="Home" src="logos/Logo1.png" class="responsiveImg">
 </a>
 
+<div class="topnav" id="myTopnav">
+  <a class="active" href="index.html">Home</a>
+  <a href="review.html">Reviews</a>
+  <a href="book.html">Book Now</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="about.html">About Us</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Language <img border="0" alt="Language" src="logos/FAVPNG_language-icon_36h5BtWF.png" class="lang"> 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="https://mabysdomesticservices.com">English</a>
+      <a href="https://translate.google.com/translate?hl=en&sl=en&tl=es&u=https%3A%2F%2Fmabysdomesticservices.com%2F">Spanish</a>
+      <a href="https://translate.google.com/translate?hl=en&sl=en&tl=zh-CN&u=https%3A%2F%2Fmabysdomesticservices.com">Chinese</a>
+    </div>
+  </div> 
+  <a class="call" href="tel:+1-650-918-7729">Call Now</a>
+
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<center><div><script async src="https://cse.google.com/cse.js?cx=009009733495483171328:yqtvv2a9eua"></script>
+<div class="gcse-search"></div></div></center>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<!-- 
 <ul class="topnav">
   <li><a class="active" href="index.html">Home</a></li>
   <li><a href="review.html">Reviews</a></li>
   <li><a href="book.html">Book Now</a></li>
   <li><a href="contact.html">Contact Us</a></li>
+  <li ><a class="call" href="tel:+1-650-918-7729">Call Now</a></li>
   <li class="right"><a href="about.html">About Us</a></li>
+  <li class="right"><a href="https://translate.google.com/translate?hl=en&sl=auto&tl=es&u=http%3A%2F%2Fmabysdomesticservices.com"><img border="0" alt="Language" src="logos/imageedit_4_9301905979.png" class="lang"></a></li>
+  <li class="right"><div class="dropdown">
+  <button class="dropbtn"><img border="0" alt="Language" src="logos/FAVPNG_language-icon_36h5BtWF.png" class="lang"></button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div></li>
   <li class="search"><center><div><script async src="https://cse.google.com/cse.js?cx=009009733495483171328:yqtvv2a9eua"></script>
 <div class="gcse-search"></div></div></center></li>
 </ul>
-
+ -->
 </header>
 
-<body onload="setInterval(myFunction(), 1000);">
+<body onload="alertFunction()">
 
 <div class="textboxNoButton">
   <center><h2>Welcome</h2><hr>
@@ -121,24 +278,151 @@ We understand life can get busy, and house cleaning sometimes falls to the botto
 </div>
 
   <div class="hide">
-  <div id="first" class="image-txt-container"><img src="pics/IMG_2462.JPG" alt="Customer Image" class="carousel"><h4 margin="0px">Apartment</h4>elementum facilisis leo vel fringilla. Elit ut aliquam purus sit amet luctus venenatis lectus magna. Eu volutpat odio facilisis mauris sit amet massa. Interdum varius sit amet mattis vulputate enim. Pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Interdum varius sit amet mattis vulputate enim nulla aliquet porttitor. Suspendisse faucibus interdum posuere lorem. At volutpat diam ut venenatis tellus. Et ligula ullamcorper malesuada proin libero nunc. Suspendisse potenti nullam ac tortor vitae purus faucibus. Non curabitur gravida arcu ac tortor dignissim convallis. Phasellus faucibus scelerisque eleifend donec. Felis imperdiet proin fermentum leo vel orci porta. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae.</div>
-  <div id="second" class="image-txt-container"><img src="pics/IMG_3898.jpeg" alt="Customer Image" class="carouselRight"><h4 margin="0px">Office</h4>mpus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis. Sed faucibus turpis in eu mi bibendum neque egestas. Pulvinar mattis nunc sed blandit libero volutpat sed. Orci eu lobortis elementum nibh tellus molestie nunc non. Erat nam at lectus urna duis convallis convallis. Natoque penatibus et magnis dis parturient montes nascetur ridiculus. Nunc id cursus metus aliquam eleifend. Venenatis a condimentum vitae sapien pellentesque habitant. Nec ultrices dui sapien eget mi. Risus nec feugiat in fermentum posuere. Tristique et egestas quis ipsum suspendisse ultrices. Ut porttitor leo a diam sollicitudin tempor id eu. Sapien faucibus et molestie ac feugiat. Imperdiet massa tincidunt nunc pulvinar sapien. In dict</div>
-  <div id="third" class="image-txt-container"><img src="pics/moving.png" alt="Customer Image" class="carousel"><h4 margin="0px">Moving</h4> We know how stressful it can be when your thinking about Moving in/out, let Maby help you with  cleaning. In our services we will help you clean and if you would like us to move out/in will have to notify our office. Our cleaning services include the following:
-    <table>
-  <tr>
-    <td>
-   <span>&#10003;   Vacuum and sweep all floors </span> </td>
-   <tr>
-  <td> 
-<span>&#x2713; Wipe down baseboards </span> </td> </tr>
-<tr><td><span>&#x2713;Scrub shower and bathtub </span> </td></tr>
-<tr><td><span>&#x2713;Scrub toilets </span> </td></tr>
-<tr><td><span>&#x2713;</span>Clean sinks and countertops </td></tr>
-<tr><td><span>&#x2713;</span> Clean kitchen appliances</td></tr>
-<tr><td><span>&#x2713;</span>Dust everything </td></tr>
-</table>
+  <div id="first" class="image-txt-container"><img src="pics/IMG_2462.JPG" alt="Customer Image" class="carousel"><h3 margin="0px">Apartment</h3>
+    <h5>Our aparment services included:</h5>
+  <table><div>
+  <tr><td><span>&#x2713; Bedroom, Living Room & Common Areas</span> </td></tr>
+    <tr><td><span>&#x2713;Dust all accessible surfaces</span> </td></tr>
+  <tr><td><span>&#x2713;Wipe down all mirrors and glass fixtures</span> </td></tr>
+  <tr><td><span>&#x2713; Clean all floor surfaces</span> </td></tr>
+</div></table>
+<h5>Bathroom Cleaning:</h5>
+<table><div>
+  <tr><td><span>&#x2713;Wash and sanitize the toilet, shower, tub and sink</span> </td></tr>
+  <tr><td><span>&#x2713;Dust all accessible surfaces.</span> </td></tr>
+  <tr><td><span>&#x2713;Wipe down all mirrors and glass fixtures.</span> </td></tr>
+  <tr><td><span>&#x2713;Clean all floor surfaces.</span> </td></tr>
+</div></table>
+<h5>Kitchen Cleaning:</h5>
+<table><div>
+  <tr><td><span>&#x2713;Dust all accessible surfaces</span> </td></tr>
+  <tr><td><span>&#x2713;Empty sink and load up dishwasher with dirty dishes.</span> </td></tr>
+  <tr><td><span>&#x2713;Wipe down exterior of stove, oven and fridge</span> </td></tr>
+  <tr><td><span>&#x2713;Clean all floor surfaces.</span> </td></tr>
+  <tr><td><span>&#x2713;Extras(highlight bold)</span> </td></tr>
+  <tr><td><span>&#x2713;For a deeper clean, consider adding one or more cleaning extras.</span> </td></tr>
+  <tr><td><span>&#x2713;Most cleaning extras add one half hour of time and cost to your booking.</span> </td></tr>
+  <tr><td><span>&#x2713;Inside cabinets</span> </td></tr>
+  <tr><td><span>&#x2713;Inside fridge</span> </td></tr>
+  <tr><td><span>&#x2713;Inside oven</span> </td></tr>
+  <tr><td><span>&#x2713;Laundry wash & dry</span> </td></tr>
+  <tr><td><span>&#x2713;Interior windows</span> </td></tr>
+  <tr><td><span>&#x2713;Take out garbage and recycling.</span> </td></tr>
+</div></table>
+</div>
+  <div id="second" class="image-txt-container"><img src="pics/IMG_3898.jpeg" alt="Customer Image" class="carouselRight"><h3 margin="0px">Office</h3>
+<p>Our comprehensive cleaning and disinfection process combines advanced cleaning protocols, disinfection best practices, and modern tools and technology that result in an exceptionally clean and sanitary facility. Our service providers first clean your surfaces using a general-purpose or bioactive cleaner or degreaser using microfiber cleaning cloths and mops. All surfaces are then disinfected using CDC- and EPA-approved processes, equipment, and products with a focus on curved and hard-to-reach surfaces and the following high-touch surfaces.</p>
+
+<h5>High-Touch Surfaces:</h5>
+<table><div>
+  <tr><td><span>&#x2713;Door Handles And Knobs.
+</span> </td></tr>
+  <tr><td><span>&#x2713;Coffee Machines.</span> </td></tr>
+  <tr><td><span>&#x2713;Copier, Printer And Fax Control Buttons</span> </td></tr>
+  <tr><td><span>&#x2713;Cabinet And File Drawer Handles
+</span> </td></tr>
+  <tr><td><span>&#x2713;Chair Arms</span> </td></tr>
+  <tr><td><span>&#x2713;Desks</span> </td></tr>
+  <tr><td><span>&#x2713;Countertops
+</span> </td></tr>
+  <tr><td><span>&#x2713;Front Desk And Lobby Surfaces</span> </td></tr>
+  <tr><td><span>&#x2713;Entryway Doors</span> </td></tr>
+  <tr><td><span>&#x2713;Equipment Controls</span> </td></tr>
+  <tr><td><span>&#x2713;Wheelchairs And Walkers</span> </td></tr>
+  <tr><td><span>&#x2713;Computer Keyboards And Mouse Devices
+</span> </td></tr>
+  <tr><td><span>&#x2713;Remote Controls</span> </td></tr>
+  <tr><td><span>&#x2713;Recreation Equipment</span> </td></tr>
+  <tr><td><span>&#x2713;Light Switches</span> </td></tr>
+  <tr><td><span>&#x2713;Handrails</span> </td></tr>
+  <tr><td><span>&#x2713;Elevator Buttons And Pads</span> </td></tr>
+  <tr><td><span>&#x2713;Phones</span> </td></tr>
+  <tr><td><span>&#x2713;Sinks And Faucets</span> </td></tr>
+  <tr><td><span>&#x2713;Restroom Stalls And Dispensers</span> </td></tr>
+  <tr><td><span>&#x2713;Vending Machines</span> </td></tr>
+  <tr><td><span>&#x2713;Food Preparation Surfaces</span> </td></tr>
+  <tr><td><span>&#x2713;Breakroom, Restaurant And Cafe Tables And Chairs</span> </td></tr>
+  
+</div></table>
   </div>
-  <div id="fourth" class="image-txt-container"><img src="pics/IMG_3898.jpeg" alt="Customer Image" class="carouselRight"><h4 margin="0px">What We Use</h4>mpus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis. Sed faucibus turpis in eu mi bibendum neque egestas. Pulvinar mattis nunc sed blandit libero volutpat sed. Orci eu lobortis elementum nibh tellus molestie nunc non. Erat nam at lectus urna duis convallis convallis. Natoque penatibus et magnis dis parturient montes nascetur ridiculus. Nunc id cursus metus aliquam eleifend. Venenatis a condimentum vitae sapien pellentesque habitant. Nec ultrices dui sapien eget mi. Risus nec feugiat in fermentum posuere. Tristique et egestas quis ipsum suspendisse ultrices. Ut porttitor leo a diam sollicitudin tempor id eu. Sapien faucibus et molestie ac feugiat. Imperdiet massa tincidunt nunc pulvinar sapien. In dict</div>
+  <div id="third" class="image-txt-container"><img src="pics/moving.png" alt="Customer Image" class="carousel"><h3 margin="0px">Moving</h3>
+    <h5>Here Is A Move Out Cleaning Checklist:</h5>
+    <table><div>
+   <tr> <td><span>&#10003;  Counter tops and Backsplash.</span> </td> </tr>
+ <tr> <td><span>&#10003; Sinks and Fixtures. </span> </td> </tr>
+ <tr> <td><span>&#10003; Inside & Outside of Cabinets and Drawers. </span> </td> </tr>
+ <tr> <td><span>&#10003; Outside of Large Appliances. </span> </td> </tr>
+ <tr> <td><span>&#10003; Inside of Microwave, Refrigerator, and Oven. </span> </td> </tr> 
+ <tr> <td><span>&#10003; Stove top. </span> </td> </tr>
+ <tr> <td><span>&#10003; Move stove and clean down and around. (This is required by property management in a move out cleaning.) </span> </td> </tr>
+  <tr> <td><span>&#10003; Move Fridge, clean down and around. (This is also required by property management in this type of cleaning.) </span> </td> </tr>
+  <tr> <td><span>&#10003; Dusting.  </span> </td> </tr>
+  <tr> <td><span>&#10003; Interior Glass, Blinds, Ledges, Baseboards, etc.</span> </td> </tr>
+ <tr> <td><span>&#10003; Sweeping & Mopping Hard Surface Floors, Vacuuming Carpets and Rugs.</span> </td> </tr>
+</div></table>
+
+ <h5>  Move Out Bathrooms Cleaning Checklist:  </h5>
+
+<table><div>
+  <tr> <td><span>&#10003; Showers and Bathtubs.</span> </td> </tr>
+ <tr> <td><span>&#10003; Clean The Toilets.</span> </td> </tr>
+ <tr> <td><span>&#10003; Counter tops. </span> </td> </tr>
+<tr> <td><span>&#10003; Sinks and Fixtures. </span> </td> </tr>
+ <tr> <td><span>&#10003; All Mirrors. </span> </td> </tr>
+ <tr> <td><span>&#10003; Inside & Outside of Cabinets and Drawers. </span> </td> </tr>
+
+ <tr> <td><span>&#10003; Dusting. </span> </td> </tr>
+ <tr> <td><span>&#10003; Interior Glass, Blinds, Ledges, Baseboards, etc. </span> </td> </tr>
+ <tr> <td><span>&#10003; Sweeping & Mopping Hard Surface Floors, Vacuuming Carpets and Rugs.
+ </span> </td> </tr>
+
+</div></table>
+
+<table><div>
+ <h5> Move Out Bedrooms and Common Living Areas Checklist: </h5>
+ <tr> <td><span>&#10003; Dusting Light Fixtures and Ceiling Fans. </span> </td> </tr> 
+ <tr> <td><span>&#10003; Dusting for cobwebs. </span> </td> </tr>
+ <tr> <td><span>&#10003; Blinds. </span> </td> </tr>
+  <tr> <td><span>&#10003; Interior Glass: Windows, Doors, Mirrors, etc. </span> </td> </tr>
+  <tr> <td><span>&#10003; Light switch and Outlet Covers. </span> </td> </tr>
+  <tr> <td><span>&#10003; Trimwork and Molding. </span> </td> </tr>
+ <tr> <td><span>&#10003; Doors and Door Frames (including the outside of glass/french doors)
+Baseboards. </span> </td> </tr>
+  <tr> <td><span>&#10003; Dusting Intake Vents and Air Return Vents. </span> </td> </tr>
+ <tr> <td><span>&#10003; Sweeping & Mopping Hard Surface Floors, Vacuuming Carpets and Rugs. </span> </td> </tr>
+
+
+</div></table>
+  </div>
+
+  <div id="fourth" class="image-txt-container"><img src="pics/IMG_3898.jpeg" alt="Customer Image" class="carouselRight"><h3 margin="0px">What We Use</h3>
+<table><div>
+<tr><td><span>&#x2713;Cleaning bucket (with 2 dividers to keep supplies in)</span></td></tr>
+  <tr><td><span>&#x2713;Disinfectant cleaner</span></td></tr>
+  <tr><td><span>&#x2713;Soap scum remover</span></td></tr>
+  <tr><td><span>&#x2713;Chemical trigger sprayers</span></td></tr>
+  <tr><td><span>&#x2713;3M light duty scrub pads and holder</span></td></tr>
+  <tr><td><span>&#x2713;Toothbrushes</span></td></tr>
+  <tr><td><span>&#x2713;Microfiber heavy-duty waffle cloths (for shower walls and tubs)</span></td></tr>
+  <tr><td><span>&#x2713;Premium microfiber glass cloths </span></td></tr>
+  <tr><td><span>&#x2713;Powder Bon-Ami (for shower and tub bottoms)</span></td></tr>
+  <tr><td><span>&#x2713;Vacuum cleaner for carpets (I recommend either a proteam backpack or oreck upright)</span></td></tr>
+  <tr><td><span>&#x2713;Vacuum cleaner for hard floors (I recommend either a proteam backpack, handheld hoover, or a two-speed oreck upright)</span></td></tr>
+  <tr><td><span>&#x2713;Microfiber mop or here </span></td></tr>
+  <tr><td><span>&#x2713;Microfiber wet mop pads</span></td></tr>
+  <tr><td><span>&#x2713;Ph neutral floor cleaner</span></td></tr>
+  <tr><td><span>&#x2713;Microfiber short duster or here</span></td></tr>
+  <tr><td><span>&#x2713;Microfiber long duster</span></td></tr>
+  <tr><td><span>&#x2713;Microfiber dust mitt</span></td></tr>
+  <tr><td><span>&#x2713;Knee pads</span></td></tr>
+  <tr><td><span>&#x2713;Backpacks or tote bags (to carry clean and dirty rags)</span></td></tr>
+  <tr><td><span>&#x2713; Disposable nitrile cleaning gloves</span></td></tr>
+ 
+</div></table>
+<blockquote><q>These are the exact cleaning products I use in my own house, cleaning business or highly recommend. This list should help you to get up and running! And all these can be provided by our company each visit, the customer can provide them or we can do the shopping and you'd just re inverse based on the reciept</q>
+<p>&mdash; Maby Delmira</p>
+</blockquote>
+  </div>
 
   </div>
 
@@ -146,7 +430,9 @@ We understand life can get busy, and house cleaning sometimes falls to the botto
 
 <div class="textboxNoButton">
   <h4>What sets us apart</h4>
-  
+  <p>One of the best things you can enjoy about our company is that you pick what kind of chemicals you'd like us to use, from organic and natural products only, to real hard and tough products depending on the jobs need and the customers preferences.<br><br>
+  We also cater to the needs and requests of each household in order to improve with time. Our goal is to use the same staff for each job with the same client in order to better understand what is expected and form a better experience for everyone.
+  </p>
   <table>
   <tr>
 <td><a href="review.html">
@@ -170,8 +456,8 @@ We understand life can get busy, and house cleaning sometimes falls to the botto
 </a>
 </th>
 <th>
-<a href="https://twitter.com/s_domestic"> <img border="0" alt="twitter" src="logos/Color-Twitter-Logo.png" class="logo">
-<p><b>@s_domestic</b><p>
+<a href="https://twitter.com/MabyServices"> <img border="0" alt="twitter" src="logos/Color-Twitter-Logo.png" class="logo">
+<p><b>@MabyServices</b><p>
 <a>
 </th>
     <th>

@@ -33,6 +33,7 @@ cursor: pointer;
   padding: 0.25em;
   position: relative;
   text-decoration: none;
+  word-break: break-all;
 }
 
 .textbox a:hover {
@@ -266,7 +267,7 @@ border-radius: 0.25em;
   ul.topnav li a {
     font-size: 1em;
   }
-  a {
+  a:not(.textbox) {
     font-size: 1em;}
   .logo {max-height: 3em;
   width: auto;}
