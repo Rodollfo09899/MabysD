@@ -269,7 +269,7 @@ border-radius: 0.25em;
   a:not(.textbox) {
     font-size: 1em;}
     .aName a {
-    word-wrap:break-word; line-height: 2.1em;
+    word-wrap:break-word; line-height: 2.2em;
     }
   .logo {max-height: 3em;
   width: auto;}
