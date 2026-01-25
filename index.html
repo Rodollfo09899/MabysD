@@ -6,6 +6,7 @@
   <title>Maby's Domestic Services | Apartment & Office Cleaning in San Francisco</title>
   <meta name="description" content="Maby's Domestic Services – Apartment, house and office cleaning in San Francisco Bay Area. Move-out cleaning, deep cleaning, regular maintenance and office cleaning." />
   <link rel="icon" href="favicon.ico" />
+
   <style>
     :root {
       --primary: #1b5e20;
@@ -19,11 +20,7 @@
       --radius-lg: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -33,17 +30,8 @@
       scroll-behavior: smooth;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* NAVBAR */
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
     header {
       position: sticky;
@@ -114,9 +102,7 @@
       transition: width 0.2s ease;
     }
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+    .nav-links a:hover::after { width: 100%; }
 
     .nav-call {
       padding: 0.4rem 0.9rem;
@@ -132,11 +118,7 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
-    .nav-call span {
-      font-size: 1.05rem;
-    }
-
-    /* LAYOUT */
+    .nav-call span { font-size: 1.05rem; }
 
     main {
       max-width: 1120px;
@@ -144,9 +126,7 @@
       padding: 1.6rem 1.4rem 3rem;
     }
 
-    section {
-      margin-bottom: 4rem;
-    }
+    section { margin-bottom: 4rem; }
 
     .section-header {
       margin-bottom: 1.8rem;
@@ -163,17 +143,13 @@
       font-weight: 700;
     }
 
-    .section-header h2 {
-      font-size: 1.7rem;
-    }
+    .section-header h2 { font-size: 1.7rem; }
 
     .section-header p {
       color: var(--muted);
       font-size: 0.96rem;
       max-width: 40rem;
     }
-
-    /* HERO */
 
     .hero {
       display: grid;
@@ -190,9 +166,7 @@
       margin-bottom: 1rem;
     }
 
-    .hero-highlight {
-      color: var(--primary);
-    }
+    .hero-highlight { color: var(--primary); }
 
     .hero-text p {
       color: #555;
@@ -261,9 +235,7 @@
       border: 1px solid rgba(27,94,32,0.35);
     }
 
-    .btn-outline:hover {
-      background: rgba(232,245,233,0.9);
-    }
+    .btn-outline:hover { background: rgba(232,245,233,0.9); }
 
     .hero-meta {
       font-size: 0.86rem;
@@ -274,9 +246,7 @@
       align-items: center;
     }
 
-    .hero-meta strong {
-      color: #444;
-    }
+    .hero-meta strong { color: #444; }
 
     .hero-card {
       position: relative;
@@ -323,11 +293,7 @@
       margin-bottom: 1.2rem;
     }
 
-    .hero-card-list li::before {
-      content: "✓";
-      margin-right: 0.45rem;
-      font-weight: 700;
-    }
+    .hero-card-list li::before { content: "✓"; margin-right: 0.45rem; font-weight: 700; }
 
     .hero-badge-bottom {
       font-size: 0.78rem;
@@ -353,8 +319,6 @@
       font-weight: 700;
     }
 
-    /* SERVICES */
-
     .cards-grid {
       display: grid;
       gap: 1.6rem;
@@ -372,10 +336,7 @@
       gap: 0.6rem;
     }
 
-    .card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.1rem;
-    }
+    .card h3 { font-size: 1.1rem; margin-bottom: 0.1rem; }
 
     .pill {
       display: inline-flex;
@@ -389,10 +350,7 @@
       font-weight: 600;
     }
 
-    .card p {
-      font-size: 0.92rem;
-      color: #555;
-    }
+    .card p { font-size: 0.92rem; color: #555; }
 
     .card ul {
       list-style: none;
@@ -403,14 +361,7 @@
       margin-top: 0.3rem;
     }
 
-    .card ul li::before {
-      content: "•";
-      margin-right: 0.4rem;
-      color: var(--accent);
-      font-weight: 900;
-    }
-
-    /* TWO COL / ABOUT */
+    .card ul li::before { content: "•"; margin-right: 0.4rem; color: var(--accent); font-weight: 900; }
 
     .two-col {
       display: grid;
@@ -427,10 +378,7 @@
       color: #555;
     }
 
-    .list-columns li {
-      break-inside: avoid;
-      margin-bottom: 0.3rem;
-    }
+    .list-columns li { break-inside: avoid; margin-bottom: 0.3rem; }
 
     .quote-box {
       background: #fff3cd;
@@ -440,12 +388,7 @@
       border: 1px solid #ffe082;
     }
 
-    .quote-box strong {
-      display: block;
-      margin-top: 0.4rem;
-    }
-
-    /* REVIEWS */
+    .quote-box strong { display: block; margin-top: 0.4rem; }
 
     .review-grid {
       display: grid;
@@ -483,13 +426,7 @@
       color: var(--muted);
     }
 
-    .stars {
-      color: #fdd835;
-      letter-spacing: 0.04em;
-      font-size: 0.9rem;
-    }
-
-    /* PRICING */
+    .stars { color: #fdd835; letter-spacing: 0.04em; font-size: 0.9rem; }
 
     .pricing-grid {
       display: grid;
@@ -509,22 +446,9 @@
       font-size: 0.9rem;
     }
 
-    .price-name {
-      font-weight: 700;
-    }
-
-    .price-value {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-    }
-
-    .price-note {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    /* CONTACT / BOOK */
+    .price-name { font-weight: 700; }
+    .price-value { font-size: 1.2rem; font-weight: 700; color: var(--primary-dark); }
+    .price-note { font-size: 0.78rem; color: var(--muted); }
 
     .contact-layout {
       display: grid;
@@ -569,15 +493,9 @@
       background: #fff;
     }
 
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
+    textarea { min-height: 120px; resize: vertical; }
 
-    .helper-text {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
+    .helper-text { font-size: 0.8rem; color: var(--muted); }
 
     .contact-card {
       background: var(--white);
@@ -590,11 +508,7 @@
       gap: 0.6rem;
     }
 
-    .contact-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.1rem;
-    }
+    .contact-item { display: flex; flex-direction: column; gap: 0.1rem; }
 
     .contact-label {
       font-size: 0.78rem;
@@ -604,9 +518,7 @@
       font-weight: 600;
     }
 
-    .contact-value {
-      font-weight: 600;
-    }
+    .contact-value { font-weight: 600; }
 
     .social-links {
       display: flex;
@@ -623,8 +535,6 @@
       background: #fafafa;
     }
 
-    /* FOOTER */
-
     footer {
       border-top: 1px solid #e0e0e0;
       padding: 1.3rem 1.4rem 2rem;
@@ -633,62 +543,70 @@
       color: var(--muted);
     }
 
-    /* RESPONSIVE */
-
     @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-card {
-        order: -1;
-      }
-
-      .cards-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .two-col,
-      .contact-layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .review-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .pricing-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .hero-card { order: -1; }
+      .cards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .two-col, .contact-layout { grid-template-columns: minmax(0, 1fr); }
+      .review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 640px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        width: 100%;
-        justify-content: space-between;
-      }
-
-      main {
-        padding-inline: 1rem;
-      }
-
-      .hero {
-        margin-top: 1.2rem;
-      }
-
-      .cards-grid,
-      .review-grid,
-      .pricing-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
+      .nav { flex-direction: column; align-items: flex-start; }
+      .nav-links { width: 100%; justify-content: space-between; }
+      main { padding-inline: 1rem; }
+      .hero { margin-top: 1.2rem; }
+      .cards-grid, .review-grid, .pricing-grid { grid-template-columns: minmax(0, 1fr); }
     }
   </style>
+
+  <!-- Google Analytics (Universal Analytics - legacy) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172255344-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-172255344-1');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Maby's Domestic Services",
+    "@id": "https://www.mabysdomesticservice.com/#business",
+    "url": "https://www.mabysdomesticservice.com",
+    "image": [
+      "https://production-next-images-cdn.thumbtack.com/i/345006381327712261/width/2200.jpeg",
+      "https://production-next-images-cdn.thumbtack.com/i/344871359121629186/width/2200.jpeg",
+      "https://production-next-images-cdn.thumbtack.com/i/345223760273276957/width/2200.jpeg"
+    ],
+    "telephone": "+16509187729",
+    "priceRange": "$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2271 Fleetwood Dr",
+      "addressLocality": "San Bruno",
+      "addressRegion": "CA",
+      "postalCode": "94066",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.687923,
+      "longitude": -122.470207
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }]
+  }
+  </script>
 </head>
+
 <body>
   <header>
     <div class="nav">
@@ -706,24 +624,16 @@
         <a href="#reviews">Reviews</a>
         <a href="#book">Book</a>
         <a href="#contact">Contact</a>
-        <a class="nav-call" href="tel:+16509187729">
-          <span>●</span> Call Now
-        </a>
+        <a class="nav-call" href="tel:+16509187729"><span>●</span> Call Now</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
     <section id="home" class="hero">
       <div class="hero-text">
-        <div class="hero-badge">
-          <span></span> Trusted home & office cleaning in San Francisco Bay Area
-        </div>
-        <h1>
-          Apartment & office cleaning
-          <span class="hero-highlight">just a call away.</span>
-        </h1>
+        <div class="hero-badge"><span></span> Trusted home & office cleaning in San Francisco Bay Area</div>
+        <h1>Apartment & office cleaning <span class="hero-highlight">just a call away.</span></h1>
         <p>
           We provide detailed apartment, house and office cleaning so you can come back to a fresh, organized and relaxing space.
           Flexible schedules, reliable service, and attention to detail in every visit.
@@ -751,13 +661,10 @@
           <li>Move-out / move-in cleanings</li>
           <li>Small office & commercial spaces</li>
         </ul>
-        <div class="hero-badge-bottom">
-          <span>★</span> Ask for same-week availability and custom pricing.
-        </div>
+        <div class="hero-badge-bottom"><span>★</span> Ask for same-week availability and custom pricing.</div>
       </div>
     </section>
 
-    <!-- SERVICES -->
     <section id="services">
       <div class="section-header">
         <div class="section-kicker">Services</div>
@@ -840,7 +747,6 @@
       </div>
     </section>
 
-    <!-- PRICING -->
     <section id="pricing">
       <div class="section-header">
         <div class="section-kicker">Pricing</div>
@@ -880,7 +786,6 @@
       </p>
     </section>
 
-    <!-- ABOUT -->
     <section id="about">
       <div class="section-header">
         <div class="section-kicker">About</div>
@@ -913,7 +818,6 @@
       </div>
     </section>
 
-    <!-- REVIEWS -->
     <section id="reviews">
       <div class="section-header">
         <div class="section-kicker">Reviews</div>
@@ -923,9 +827,7 @@
 
       <div class="review-grid">
         <article class="review-card">
-          <p>
-            “Very reliable and detailed. My apartment looks and smells fresh every time. I appreciate the consistency and care with my belongings.”
-          </p>
+          <p>“Very reliable and detailed. My apartment looks and smells fresh every time. I appreciate the consistency and care with my belongings.”</p>
           <div class="review-footer">
             <span>Client – San Francisco</span>
             <span class="stars">★★★★★</span>
@@ -933,9 +835,7 @@
         </article>
 
         <article class="review-card">
-          <p>
-            “They helped us with a last-minute move-out cleaning and the place was spotless. The landlord was very happy and we got our deposit back.”
-          </p>
+          <p>“They helped us with a last-minute move-out cleaning and the place was spotless. The landlord was very happy and we got our deposit back.”</p>
           <div class="review-footer">
             <span>Client – Daly City</span>
             <span class="stars">★★★★★</span>
@@ -943,9 +843,7 @@
         </article>
 
         <article class="review-card">
-          <p>
-            “Our small office feels so much better after each cleaning. Good communication and flexible timing around our work hours.”
-          </p>
+          <p>“Our small office feels so much better after each cleaning. Good communication and flexible timing around our work hours.”</p>
           <div class="review-footer">
             <span>Client – South San Francisco</span>
             <span class="stars">★★★★★</span>
@@ -954,7 +852,6 @@
       </div>
     </section>
 
-    <!-- BOOK A QUOTE -->
     <section id="book">
       <div class="section-header">
         <div class="section-kicker">Quote</div>
@@ -963,6 +860,7 @@
       </div>
 
       <div class="contact-layout">
+        <!-- IMPORTANT: replace this email with the correct one if it's misspelled -->
         <form action="mailto:mabisdomescticsev101@gmail.com" method="POST" enctype="text/plain">
           <div>
             <label for="name">Name</label>
@@ -1002,16 +900,12 @@
         <aside class="contact-card" id="contact">
           <div class="contact-item">
             <span class="contact-label">Phone</span>
-            <span class="contact-value">
-              <a href="tel:+16509187729">(650) 918-7729</a>
-            </span>
+            <span class="contact-value"><a href="tel:+16509187729">(650) 918-7729</a></span>
           </div>
 
           <div class="contact-item">
             <span class="contact-label">Email</span>
-            <span class="contact-value">
-              <a href="mailto:mabisdomescticsev101@gmail.com">mabisdomescticsev101@gmail.com</a>
-            </span>
+            <span class="contact-value"><a href="mailto:mabisdomescticsev101@gmail.com">mabisdomescticsev101@gmail.com</a></span>
           </div>
 
           <div class="contact-item">
@@ -1029,8 +923,6 @@
             <div class="social-links">
               <a class="social-pill" href="tel:+16509187729">Call now</a>
               <a class="social-pill" href="sms:+16509187729">Text message</a>
-              <!-- If you have WhatsApp, replace XXXXXXXXXX with your phone -->
-              <!-- <a class="social-pill" href="https://wa.me/1XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a> -->
             </div>
           </div>
         </aside>
@@ -1040,75 +932,12 @@
 
   <footer>
     © <span id="year"></span> Maby's Domestic Services. All rights reserved.
-  
-    <!-- Google Analytics (Universal Analytics - legacy) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172255344-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-172255344-1');
-</script>
+    <br />
+    <small>Copyright &copy; 2020 Maby's Domestic Services. All Rights Reserved</small>
+  </footer>
 
-</script>
-
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "image": [       "https://production-next-images-cdn.thumbtack.com/i/345006381327712261/width/2200.jpeg",
-        "https://production-next-images-cdn.thumbtack.com/i/344871359121629186/width/2200.jpeg",
-        "https://production-next-images-cdn.thumbtack.com/i/345223760273276957/width/2200.jpeg"
-       ],
-      "@id": "http://mabysdomesticservice.com",
-      "name": "Maby's Domestic Services",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2271 Fleetwood Dr",
-        "addressLocality": "San Bruno",
-        "addressRegion": "CA",
-        "postalCode": "94066",
-        "addressCountry": "US"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5.0",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Jay Jaber"
-        }
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 37.687923,
-        "longitude": -122.470207
-      },
-      "url": "https://mabysdomesticservices.com",
-      "telephone": "+4157569023",
-      "priceRange": "$",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
-          "opens": "08:00",
-          "closes": "18:00"
-        }
-              ]
-    }
-    </script>
-
-
-  <small>Copyright &copy; 2020 Maby's Domestic Services. All Rights Reserved</small>
-</footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
