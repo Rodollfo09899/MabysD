@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You | Maby's Domestic Services</title>
+
   <style>
     body {
       margin: 0;
@@ -27,4 +28,87 @@
     }
 
     h1 {
-      margin-bottom: 0.8rem
+      margin-bottom: 0.8rem;
+      font-size: 2rem;
+      color: #1b5e20;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.4rem;
+      line-height: 1.5;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 0.75rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #1b5e20;
+      color: #fff;
+    }
+
+    .btn-outline {
+      border: 1px solid #1b5e20;
+      color: #1b5e20;
+      background: #fff;
+    }
+
+    .btn-outline:hover {
+      background: #e8f5e9;
+    }
+
+    .phone {
+      margin-top: 1.4rem;
+      font-weight: 600;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .phone a {
+      color: #1b5e20;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Thank you for your request</h1>
+
+    <p>
+      Your quote request has been sent successfully.  
+      We will review your message and respond as soon as possible.
+    </p>
+
+    <p>
+      If your request is urgent, you can call or text us directly.
+    </p>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="tel:+16509187729">Call (650) 918-7729</a>
+      <a class="btn btn-outline" href="https://www.mabysdomesticservice.com">Back to homepage</a>
+    </div>
+
+    <div class="phone">
+      Maby's Domestic Services • San Francisco Bay Area
+    </div>
+  </div>
+
+</body>
+</html>
