@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maby's Domestic Services | Apartment & Office Cleaning in San Francisco</title>
-  <meta name="description" content="Maby's Domestic Services – Apartment, house and office cleaning in San Francisco Bay Area. Move-out cleaning, deep cleaning, regular maintenance and office cleaning." />
+  <title>Maby's Domestic Services | Apartment & Office Cleaning in San Francisco Bay Area</title>
+  <meta name="description" content="Maby's Domestic Services offers apartment, house, move-out, deep cleaning and office cleaning services in San Francisco, San Bruno, Daly City, South San Francisco and nearby Bay Area cities." />
   <link rel="icon" href="favicon.ico" />
 
   <style>
@@ -17,35 +17,48 @@
       --muted: #777;
       --white: #ffffff;
       --shadow-soft: 0 18px 45px rgba(0,0,0,0.08);
+      --shadow-strong: 0 18px 55px rgba(0,0,0,0.18);
       --radius-lg: 18px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      scroll-behavior: smooth;
     }
 
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
 
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: #000;
+      color: #fff;
+      padding: 0.75rem 1rem;
+      z-index: 999;
+    }
+    .skip-link:focus { left: 1rem; top: 1rem; }
+
     header {
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 100;
       background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       box-shadow: 0 1px 0 rgba(0,0,0,0.05);
     }
 
     .nav {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 0.6rem 1.4rem;
+      padding: 0.7rem 1.4rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -54,17 +67,18 @@
 
     .logo {
       font-weight: 700;
-      letter-spacing: 0.05em;
-      font-size: 1.1rem;
+      letter-spacing: 0.03em;
+      font-size: 1.05rem;
       text-transform: uppercase;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.65rem;
+      min-width: 0;
     }
 
     .logo-badge {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: radial-gradient(circle at 30% 0%, #a5d6a7, #1b5e20);
       display: flex;
@@ -74,11 +88,21 @@
       font-weight: 800;
       font-size: 1.1rem;
       box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+      flex-shrink: 0;
+    }
+
+    .logo small {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #777;
+      text-transform: none;
+      letter-spacing: normal;
     }
 
     .nav-links {
       display: flex;
-      gap: 1.2rem;
+      gap: 1.1rem;
       font-size: 0.94rem;
       align-items: center;
       flex-wrap: wrap;
@@ -89,9 +113,10 @@
       position: relative;
       padding-bottom: 2px;
       color: #444;
+      font-weight: 500;
     }
 
-    .nav-links a::after {
+    .nav-links a:not(.nav-call)::after {
       content: "";
       position: absolute;
       left: 0;
@@ -102,28 +127,29 @@
       transition: width 0.2s ease;
     }
 
-    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:not(.nav-call):hover::after { width: 100%; }
 
     .nav-call {
-      padding: 0.4rem 0.9rem;
+      padding: 0.5rem 1rem;
       border-radius: 999px;
       border: 1px solid rgba(27,94,32,0.2);
       background: linear-gradient(120deg, var(--primary), var(--primary-dark));
       color: #fff;
       font-size: 0.9rem;
-      font-weight: 600;
+      font-weight: 700;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      white-space: nowrap;
     }
 
-    .nav-call span { font-size: 1.05rem; }
+    .nav-call span { font-size: 1rem; }
 
     main {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 1.6rem 1.4rem 3rem;
+      padding: 1.6rem 1.4rem 6rem;
     }
 
     section { margin-bottom: 4rem; }
@@ -132,7 +158,7 @@
       margin-bottom: 1.8rem;
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;
+      gap: 0.45rem;
     }
 
     .section-kicker {
@@ -143,12 +169,15 @@
       font-weight: 700;
     }
 
-    .section-header h2 { font-size: 1.7rem; }
+    .section-header h2 {
+      font-size: 1.8rem;
+      line-height: 1.15;
+    }
 
     .section-header p {
       color: var(--muted);
       font-size: 0.96rem;
-      max-width: 42rem;
+      max-width: 44rem;
     }
 
     .hero {
@@ -157,12 +186,12 @@
       gap: 2.4rem;
       align-items: center;
       margin-top: 1.8rem;
-      margin-bottom: 3rem;
+      margin-bottom: 3.2rem;
     }
 
     .hero-text h1 {
-      font-size: clamp(2.1rem, 3vw + 1.3rem, 3rem);
-      line-height: 1.1;
+      font-size: clamp(2.2rem, 3vw + 1.3rem, 3.2rem);
+      line-height: 1.05;
       margin-bottom: 1rem;
     }
 
@@ -171,8 +200,8 @@
     .hero-text p {
       color: #555;
       font-size: 1rem;
-      max-width: 34rem;
-      margin-bottom: 1.4rem;
+      max-width: 36rem;
+      margin-bottom: 1.2rem;
     }
 
     .hero-badge {
@@ -181,11 +210,11 @@
       gap: 0.5rem;
       background: #e8f5e9;
       color: #1b5e20;
-      padding: 0.35rem 0.8rem;
+      padding: 0.38rem 0.85rem;
       border-radius: 999px;
       font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 0.7rem;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
     }
 
     .hero-badge span {
@@ -209,13 +238,13 @@
       justify-content: center;
       gap: 0.45rem;
       border-radius: 999px;
-      padding: 0.78rem 1.4rem;
+      padding: 0.82rem 1.45rem;
       font-size: 0.95rem;
-      font-weight: 600;
+      font-weight: 700;
       border: none;
       cursor: pointer;
       text-decoration: none;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, border 0.12s ease;
     }
 
     .btn-primary {
@@ -237,6 +266,15 @@
 
     .btn-outline:hover { background: rgba(232,245,233,0.9); }
 
+    .btn-soft {
+      background: #fff;
+      color: var(--primary-dark);
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+    }
+
+    .btn-soft:hover { background: #fafafa; }
+
     .hero-meta {
       font-size: 0.86rem;
       color: var(--muted);
@@ -244,16 +282,38 @@
       flex-wrap: wrap;
       gap: 0.6rem;
       align-items: center;
+      margin-bottom: 1rem;
     }
 
     .hero-meta strong { color: #444; }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.3rem;
+    }
+
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      font-size: 0.82rem;
+      color: #444;
+      font-weight: 600;
+    }
 
     .hero-card {
       position: relative;
       background: radial-gradient(circle at 10% 0%, #c8e6c9, #1b5e20);
       border-radius: 26px;
       padding: 1.7rem 1.5rem;
-      box-shadow: var(--shadow-soft);
+      box-shadow: var(--shadow-strong);
       color: #f5f5f5;
       overflow: hidden;
     }
@@ -268,9 +328,9 @@
     }
 
     .hero-card-title {
-      font-weight: 600;
+      font-weight: 700;
       font-size: 1rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.55rem;
       display: flex;
       justify-content: space-between;
       gap: 0.5rem;
@@ -283,25 +343,30 @@
       border-radius: 999px;
       background: rgba(0,0,0,0.25);
       border: 1px solid rgba(255,255,255,0.35);
+      white-space: nowrap;
     }
 
     .hero-card-list {
       list-style: none;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       display: grid;
-      gap: 0.35rem;
+      gap: 0.42rem;
       margin-bottom: 1.2rem;
     }
 
-    .hero-card-list li::before { content: "✓"; margin-right: 0.45rem; font-weight: 700; }
+    .hero-card-list li::before {
+      content: "✓";
+      margin-right: 0.45rem;
+      font-weight: 700;
+    }
 
     .hero-badge-bottom {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
       background: rgba(0,0,0,0.35);
-      padding: 0.28rem 0.7rem;
+      padding: 0.35rem 0.75rem;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,0.3);
     }
@@ -319,24 +384,42 @@
       font-weight: 700;
     }
 
-    .cards-grid {
+    .cards-grid,
+    .review-grid,
+    .pricing-grid,
+    .gallery-grid,
+    .service-area-grid {
       display: grid;
       gap: 1.6rem;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .cards-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .review-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .pricing-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .service-area-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .card,
+    .review-card,
+    .price-card,
+    .gallery-card,
+    .service-area-card,
+    form,
+    .contact-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(0,0,0,0.03);
     }
 
     .card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
       padding: 1.4rem 1.3rem 1.3rem;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(0,0,0,0.03);
       display: flex;
       flex-direction: column;
       gap: 0.6rem;
     }
 
-    .card h3 { font-size: 1.1rem; margin-bottom: 0.1rem; }
+    .card h3 { font-size: 1.1rem; }
 
     .pill {
       display: inline-flex;
@@ -347,7 +430,8 @@
       border-radius: 999px;
       background: #e8f5e9;
       color: #1b5e20;
-      font-weight: 600;
+      font-weight: 700;
+      align-self: flex-start;
     }
 
     .card p { font-size: 0.92rem; color: #555; }
@@ -361,24 +445,22 @@
       margin-top: 0.3rem;
     }
 
-    .card ul li::before { content: "•"; margin-right: 0.4rem; color: var(--accent); font-weight: 900; }
-
-    .gallery-section {
-      margin-top: -0.5rem;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
+    .card ul li::before {
+      content: "•";
+      margin-right: 0.4rem;
+      color: var(--accent);
+      font-weight: 900;
     }
 
     .gallery-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(0,0,0,0.04);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      cursor: pointer;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-strong);
     }
 
     .gallery-card img {
@@ -389,7 +471,7 @@
     }
 
     .gallery-caption {
-      padding: 0.9rem 1rem 1rem;
+      padding: 0.95rem 1rem 1rem;
       display: flex;
       flex-direction: column;
       gap: 0.25rem;
@@ -422,6 +504,8 @@
       margin-top: 1.4rem;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
     }
 
     .two-col {
@@ -435,33 +519,28 @@
       columns: 2;
       column-gap: 1.4rem;
       list-style: none;
-      font-size: 0.86rem;
+      font-size: 0.88rem;
       color: #555;
+      margin-top: 0.7rem;
     }
 
-    .list-columns li { break-inside: avoid; margin-bottom: 0.3rem; }
+    .list-columns li { break-inside: avoid; margin-bottom: 0.38rem; }
 
     .quote-box {
       background: #fff3cd;
       border-radius: var(--radius-lg);
       padding: 1rem 1.1rem;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       border: 1px solid #ffe082;
     }
 
-    .quote-box strong { display: block; margin-top: 0.4rem; }
-
-    .review-grid {
-      display: grid;
-      gap: 1.6rem;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+    .quote-box strong {
+      display: block;
+      margin-top: 0.45rem;
     }
 
     .review-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
       padding: 1.2rem 1.3rem;
-      box-shadow: var(--shadow-soft);
       font-size: 0.92rem;
       color: #444;
       position: relative;
@@ -482,24 +561,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 0.7rem;
+      margin-top: 0.75rem;
       font-size: 0.82rem;
       color: var(--muted);
+      gap: 0.8rem;
     }
 
-    .stars { color: #fdd835; letter-spacing: 0.04em; font-size: 0.9rem; }
-
-    .pricing-grid {
-      display: grid;
-      gap: 1.6rem;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+    .stars {
+      color: #fdd835;
+      letter-spacing: 0.04em;
+      font-size: 0.9rem;
+      white-space: nowrap;
     }
 
     .price-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(0,0,0,0.03);
       padding: 1.4rem 1.2rem 1.3rem;
       display: flex;
       flex-direction: column;
@@ -508,8 +583,16 @@
     }
 
     .price-name { font-weight: 700; }
-    .price-value { font-size: 1.2rem; font-weight: 700; color: var(--primary-dark); }
-    .price-note { font-size: 0.78rem; color: var(--muted); }
+    .price-value { font-size: 1.25rem; font-weight: 800; color: var(--primary-dark); }
+    .price-note { font-size: 0.8rem; color: var(--muted); }
+
+    .service-area-card {
+      padding: 1rem 1rem 0.95rem;
+      text-align: center;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #444;
+    }
 
     .contact-layout {
       display: grid;
@@ -519,29 +602,49 @@
     }
 
     form {
-      background: var(--white);
-      border-radius: var(--radius-lg);
       padding: 1.4rem 1.3rem 1.5rem;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(0,0,0,0.03);
       display: grid;
+      gap: 1rem;
+    }
+
+    .form-top {
+      display: grid;
+      gap: 0.3rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .form-top h3 {
+      font-size: 1.15rem;
+      line-height: 1.2;
+    }
+
+    .form-top p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 0.9rem;
     }
 
+    .full-span { grid-column: 1 / -1; }
+
     label {
       font-size: 0.86rem;
-      font-weight: 600;
+      font-weight: 700;
       color: #555;
       display: block;
-      margin-bottom: 0.18rem;
+      margin-bottom: 0.22rem;
     }
 
     input, textarea, select {
       width: 100%;
-      padding: 0.6rem 0.7rem;
-      border-radius: 10px;
+      padding: 0.72rem 0.8rem;
+      border-radius: 12px;
       border: 1px solid #d3d3d3;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       font-family: inherit;
       outline: none;
       transition: border 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
@@ -554,32 +657,41 @@
       background: #fff;
     }
 
-    textarea { min-height: 120px; resize: vertical; }
-
-    .helper-text { font-size: 0.8rem; color: var(--muted); }
-
-    .contact-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 1.2rem 1.3rem;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(0,0,0,0.03);
-      font-size: 0.9rem;
-      display: grid;
-      gap: 0.6rem;
+    textarea {
+      min-height: 140px;
+      resize: vertical;
     }
 
-    .contact-item { display: flex; flex-direction: column; gap: 0.1rem; }
+    .helper-text {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .contact-card {
+      padding: 1.2rem 1.3rem;
+      font-size: 0.92rem;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
 
     .contact-label {
       font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
       color: var(--muted);
-      font-weight: 600;
+      font-weight: 700;
     }
 
-    .contact-value { font-weight: 600; }
+    .contact-value {
+      font-weight: 700;
+      color: #333;
+    }
 
     .social-links {
       display: flex;
@@ -590,10 +702,11 @@
     }
 
     .social-pill {
-      padding: 0.32rem 0.8rem;
+      padding: 0.38rem 0.85rem;
       border-radius: 999px;
       border: 1px solid #e0e0e0;
       background: #fafafa;
+      font-weight: 600;
     }
 
     footer {
@@ -602,29 +715,164 @@
       text-align: center;
       font-size: 0.82rem;
       color: var(--muted);
+      background: rgba(255,255,255,0.6);
     }
 
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: minmax(0, 1fr); }
+    .mobile-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 120;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(0,0,0,0.08);
+      padding: 0.7rem 0.9rem calc(0.7rem + env(safe-area-inset-bottom));
+      display: none;
+      gap: 0.7rem;
+      box-shadow: 0 -10px 35px rgba(0,0,0,0.08);
+    }
+
+    .mobile-bar a {
+      flex: 1;
+      text-align: center;
+      border-radius: 999px;
+      padding: 0.85rem 0.9rem;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .mobile-call {
+      background: linear-gradient(125deg, var(--primary), var(--primary-dark));
+      color: #fff;
+    }
+
+    .mobile-text {
+      background: #fff;
+      color: var(--primary-dark);
+      border: 1px solid rgba(27,94,32,0.22);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      z-index: 200;
+    }
+
+    .lightbox.active { display: flex; }
+
+    .lightbox-inner {
+      position: relative;
+      max-width: 1000px;
+      width: 100%;
+      display: grid;
+      gap: 0.8rem;
+      justify-items: center;
+    }
+
+    .lightbox img {
+      max-height: 78vh;
+      width: auto;
+      max-width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+
+    .lightbox-caption {
+      color: #fff;
+      font-size: 0.94rem;
+      text-align: center;
+      max-width: 50rem;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -0.5rem;
+      right: 0;
+      background: rgba(255,255,255,0.14);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.18);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .two-col,
+      .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
       .hero-card { order: -1; }
-      .cards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .two-col, .contact-layout { grid-template-columns: minmax(0, 1fr); }
-      .review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+      .cards-grid,
+      .review-grid,
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pricing-grid,
+      .service-area-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0.75rem;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 640px) {
-      .nav { flex-direction: column; align-items: flex-start; }
-      .nav-links { width: 100%; justify-content: space-between; }
-      main { padding-inline: 1rem; }
+      main {
+        padding-inline: 1rem;
+        padding-bottom: 6.5rem;
+      }
+
       .hero { margin-top: 1.2rem; }
-      .cards-grid, .gallery-grid, .review-grid, .pricing-grid { grid-template-columns: minmax(0, 1fr); }
-      .gallery-card img { height: 220px; }
+
+      .cards-grid,
+      .review-grid,
+      .pricing-grid,
+      .gallery-grid,
+      .service-area-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-card img {
+        height: 220px;
+      }
+
+      .list-columns {
+        columns: 1;
+      }
+
+      .mobile-bar {
+        display: flex;
+      }
     }
   </style>
 
-  <!-- Google Analytics (Universal Analytics - legacy) -->
+  <!-- Replace UA with GA4 later. This is legacy tracking. -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172255344-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -640,13 +888,13 @@
     "name": "Maby's Domestic Services",
     "@id": "https://www.mabysdomesticservice.com/#business",
     "url": "https://www.mabysdomesticservice.com",
-    "image": [
-      "https://production-next-images-cdn.thumbtack.com/i/345006381327712261/width/2200.jpeg",
-      "https://production-next-images-cdn.thumbtack.com/i/344871359121629186/width/2200.jpeg",
-      "https://production-next-images-cdn.thumbtack.com/i/345223760273276957/width/2200.jpeg"
-    ],
     "telephone": "+16509187729",
     "priceRange": "$",
+    "image": [
+      "https://www.mabysdomesticservice.com/pics/cleaning-1.jpg",
+      "https://www.mabysdomesticservice.com/pics/cleaning-2.jpg",
+      "https://www.mabysdomesticservice.com/pics/cleaning-3.jpg"
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "2271 Fleetwood Dr",
@@ -660,6 +908,16 @@
       "latitude": 37.687923,
       "longitude": -122.470207
     },
+    "areaServed": [
+      "San Francisco",
+      "San Bruno",
+      "Daly City",
+      "South San Francisco",
+      "Millbrae",
+      "Burlingame",
+      "Pacifica",
+      "San Mateo"
+    ],
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
@@ -671,19 +929,23 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header>
     <div class="nav">
       <div class="logo">
         <div class="logo-badge">M</div>
         <div>
           <div>Maby's Domestic Services</div>
-          <small style="font-size:0.7rem; font-weight:500; color:#777;">San Francisco Bay Area • Since 2005</small>
+          <small>San Francisco Bay Area • Since 2005</small>
         </div>
       </div>
-      <nav class="nav-links">
+
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#results">Results</a>
         <a href="#pricing">Pricing</a>
+        <a href="#areas">Areas</a>
         <a href="#about">About</a>
         <a href="#reviews">Reviews</a>
         <a href="#book">Book</a>
@@ -693,39 +955,50 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section id="home" class="hero">
       <div class="hero-text">
-        <div class="hero-badge"><span></span> Trusted home & office cleaning in the San Francisco Bay Area</div>
-        <h1>Professional cleaning for apartments, homes and offices <span class="hero-highlight">done with care.</span></h1>
+        <div class="hero-badge"><span></span> Trusted apartment, home & office cleaning in the Bay Area</div>
+        <h1>Professional cleaning that leaves your space <span class="hero-highlight">fresh, detailed and cared for.</span></h1>
         <p>
-          We provide reliable, detailed cleaning services so you can come back to a fresh, organized and relaxing space.
-          From regular maintenance to move-out and deep cleaning, we focus on quality, consistency and real results.
+          We provide reliable apartment, house, move-out, deep cleaning and office cleaning services with real attention to detail.
+          Flexible scheduling, consistent results and respectful service every visit.
         </p>
 
         <div class="hero-cta">
           <a href="tel:+16509187729" class="btn btn-primary">Call now: (650) 918-7729</a>
           <a href="#book" class="btn btn-outline">Request a free quote</a>
+          <a href="sms:+16509187729" class="btn btn-soft">Text for fastest response</a>
         </div>
 
         <div class="hero-meta">
-          <span><strong>15+ years</strong> of cleaning experience</span> •
-          <span>Move-out, deep & recurring cleanings</span> •
-          <span>San Francisco, San Bruno, Daly City & nearby cities</span>
+          <span><strong>15+ years</strong> of experience</span> •
+          <span>Move-out, deep & recurring cleaning</span> •
+          <span>Serving San Francisco, San Bruno, Daly City & nearby cities</span>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-pill">Detailed cleaning</div>
+          <div class="trust-pill">Flexible scheduling</div>
+          <div class="trust-pill">Free quotes</div>
+          <div class="trust-pill">Residential & office</div>
         </div>
       </div>
 
       <div class="hero-card">
         <div class="hero-card-title">
-          <div>Today’s openings</div>
+          <div>This week’s availability</div>
           <div class="hero-pill">Limited spots</div>
         </div>
+
         <ul class="hero-card-list">
-          <li>Studio, 1BR and 2BR apartments</li>
-          <li>Move-out / move-in cleanings</li>
-          <li>Small office & commercial spaces</li>
+          <li>Studio, 1BR and 2BR apartment cleanings</li>
+          <li>Move-in / move-out appointments</li>
+          <li>Small office and commercial spaces</li>
+          <li>Recurring weekly or bi-weekly visits</li>
         </ul>
-        <div class="hero-badge-bottom"><span>★</span> Ask for same-week availability, custom pricing and text message response.</div>
+
+        <div class="hero-badge-bottom"><span>★</span> Ask for same-week scheduling, custom pricing and text message response.</div>
       </div>
     </section>
 
@@ -733,149 +1006,150 @@
       <div class="section-header">
         <div class="section-kicker">Services</div>
         <h2>Cleaning services tailored to your space</h2>
-        <p>We customize each visit depending on the size of your home or office, your priorities and how often you need cleaning.</p>
+        <p>Every visit can be adjusted based on your home, apartment or office size, condition and priorities.</p>
       </div>
 
       <div class="cards-grid">
         <article class="card">
           <div class="pill">Most popular</div>
           <h3>Standard Apartment Cleaning</h3>
-          <p>Perfect for regular maintenance of your apartment or small home.</p>
+          <p>Great for routine upkeep and keeping your apartment or small home fresh.</p>
           <ul>
-            <li>Dusting of all surfaces and furniture</li>
-            <li>Kitchen counters, stove top and outside of appliances</li>
+            <li>Dusting of furniture and surfaces</li>
+            <li>Kitchen counters, stove top and outer appliances</li>
             <li>Bathroom sinks, toilets, mirrors and showers</li>
-            <li>Floors vacuumed and mopped</li>
+            <li>Vacuuming and mopping floors</li>
           </ul>
         </article>
 
         <article class="card">
           <div class="pill">Deep clean</div>
           <h3>Deep Cleaning</h3>
-          <p>A more detailed cleaning for high traffic areas or before a special occasion.</p>
+          <p>Best when your space needs extra detail or has been neglected for some time.</p>
           <ul>
-            <li>Baseboards, doors and light switches</li>
-            <li>Inside microwave and extra kitchen details</li>
-            <li>Extra focus on bathrooms and grout</li>
-            <li>Behind / under easy-to-move furniture</li>
+            <li>Baseboards, doors and switches</li>
+            <li>Inside microwave and extra kitchen detail</li>
+            <li>Extra bathroom and grout attention</li>
+            <li>Behind or under easy-to-move furniture</li>
           </ul>
         </article>
 
         <article class="card">
           <div class="pill">Move-in / Move-out</div>
           <h3>Move-out Cleaning</h3>
-          <p>Ideal when you are moving in or out and need the place to be spotless.</p>
+          <p>For vacant homes or apartments that need to look sharp for final walkthroughs.</p>
           <ul>
-            <li>Inside cabinets and closets (empty)</li>
-            <li>Inside fridge and oven (upon request)</li>
-            <li>Bathrooms, kitchen and all floors detailed</li>
-            <li>Ready for new tenants or inspection</li>
+            <li>Inside empty cabinets and closets</li>
+            <li>Inside fridge and oven on request</li>
+            <li>Detailed bathrooms, kitchen and floors</li>
+            <li>Ready for inspection or new tenants</li>
           </ul>
         </article>
 
         <article class="card">
           <div class="pill">Office</div>
           <h3>Office & Small Business Cleaning</h3>
-          <p>Keep your office clean and professional for your team and clients.</p>
+          <p>Keep your office clean, presentable and comfortable for staff and clients.</p>
           <ul>
-            <li>Desks, common areas and break rooms</li>
+            <li>Desks, shared areas and break rooms</li>
             <li>Trash removal and vacuuming</li>
             <li>Bathrooms and entry areas</li>
-            <li>Weekly, bi-weekly or monthly visits</li>
+            <li>Weekly, bi-weekly or monthly options</li>
           </ul>
         </article>
 
         <article class="card">
           <div class="pill">Recurring</div>
           <h3>Weekly / Bi-weekly Service</h3>
-          <p>Regular cleanings to keep your home fresh without thinking about it.</p>
+          <p>Stay on top of cleaning without constantly having to think about it.</p>
           <ul>
-            <li>Flexible schedule to fit your routine</li>
-            <li>Same person whenever possible</li>
-            <li>Discounted recurring rates</li>
-            <li>Simple reminders before each visit</li>
+            <li>Scheduling that fits your routine</li>
+            <li>Consistent service whenever possible</li>
+            <li>Better value with recurring visits</li>
+            <li>Simple reminder communication</li>
           </ul>
         </article>
 
         <article class="card">
           <div class="pill">Customized</div>
           <h3>Custom Cleaning</h3>
-          <p>Tell us exactly what you need and we’ll design a visit around your priorities.</p>
+          <p>Need something specific? We can focus only on the areas that matter most to you.</p>
           <ul>
-            <li>Post-renovation cleanings</li>
+            <li>Post-renovation cleanups</li>
             <li>Extra organizing help</li>
-            <li>Only kitchen / only bathrooms options</li>
-            <li>One-time or occasional cleanings</li>
+            <li>Kitchen-only or bathroom-only visits</li>
+            <li>One-time and occasional jobs</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section id="results" class="gallery-section">
+    <section id="results">
       <div class="section-header">
         <div class="section-kicker">Real Results</div>
-        <h2>See examples of our real cleaning work</h2>
-        <p>Show real kitchens, bathrooms, apartments, move-out cleanings and office spaces here. This section builds trust fast and helps clients feel confident before they contact you.</p>
+        <h2>Real cleaning work your clients can actually see</h2>
+        <p>Use real photos here. This is one of the strongest trust-builders on the whole site. Click any image to open it larger.</p>
       </div>
 
       <div class="gallery-grid">
-        <article class="gallery-card">
+        <article class="gallery-card" data-full="pics/cleaning-1.jpg" data-caption="Detailed kitchen cleaning result for apartment or house service.">
           <img src="pics/cleaning-1.jpg" alt="Clean kitchen after professional apartment cleaning service" loading="lazy" />
           <div class="gallery-caption">
             <span class="gallery-tag">Kitchen</span>
             <h3>Detailed kitchen cleaning</h3>
-            <p>Ideal for apartments, houses and recurring cleanings.</p>
+            <p>Strong for regular cleaning, deep cleaning and pre-visit prep.</p>
           </div>
         </article>
 
-        <article class="gallery-card">
+        <article class="gallery-card" data-full="pics/cleaning-2.jpg" data-caption="Polished bathroom cleaning result with detailed surfaces.">
           <img src="pics/cleaning-2.jpg" alt="Bathroom cleaning result with polished surfaces" loading="lazy" />
           <div class="gallery-caption">
             <span class="gallery-tag">Bathroom</span>
             <h3>Fresh and polished bathrooms</h3>
-            <p>Perfect for deep cleans and move-out jobs.</p>
+            <p>Good for deep cleans, move-out jobs and recurring upkeep.</p>
           </div>
         </article>
 
-        <article class="gallery-card">
+        <article class="gallery-card" data-full="pics/cleaning-3.jpg" data-caption="Move-out cleaning result in an empty apartment ready for walkthrough.">
           <img src="pics/cleaning-3.jpg" alt="Move-out cleaning result in empty apartment" loading="lazy" />
           <div class="gallery-caption">
             <span class="gallery-tag">Move-Out</span>
             <h3>Ready for inspection</h3>
-            <p>Great for tenants, landlords and final walkthroughs.</p>
+            <p>Perfect for landlords, tenants and final walkthroughs.</p>
           </div>
         </article>
 
-        <article class="gallery-card">
+        <article class="gallery-card" data-full="pics/cleaning-4.jpg" data-caption="Apartment living room cleaned and organized.">
           <img src="pics/cleaning-4.jpg" alt="Apartment living room cleaned and organized" loading="lazy" />
           <div class="gallery-caption">
             <span class="gallery-tag">Apartment</span>
             <h3>Clean and organized living spaces</h3>
-            <p>Maintenance cleaning with attention to detail.</p>
+            <p>Great for maintenance cleaning with visible detail.</p>
           </div>
         </article>
 
-        <article class="gallery-card">
+        <article class="gallery-card" data-full="pics/cleaning-5.jpg" data-caption="Small office space cleaned and refreshed for team or clients.">
           <img src="pics/cleaning-5.jpg" alt="Small office space cleaned and refreshed" loading="lazy" />
           <div class="gallery-caption">
             <span class="gallery-tag">Office</span>
             <h3>Professional office cleaning</h3>
-            <p>Clean spaces for teams, clients and daily operations.</p>
+            <p>Clean workspaces for teams, visitors and daily business.</p>
           </div>
         </article>
 
-        <article class="gallery-card">
+        <article class="gallery-card" data-full="pics/cleaning-6.jpg" data-caption="Before-and-after deep cleaning example showing visible results.">
           <img src="pics/cleaning-6.jpg" alt="Before and after deep cleaning example" loading="lazy" />
           <div class="gallery-caption">
             <span class="gallery-tag">Deep Clean</span>
-            <h3>Results you can actually see</h3>
-            <p>Use this spot for a strong before-and-after photo.</p>
+            <h3>Results clients can see</h3>
+            <p>Use your strongest before-and-after image in this spot.</p>
           </div>
         </article>
       </div>
 
       <div class="gallery-cta">
         <a href="#book" class="btn btn-primary">Request a free quote</a>
+        <a href="sms:+16509187729" class="btn btn-soft">Text us your photos</a>
       </div>
     </section>
 
@@ -883,67 +1157,86 @@
       <div class="section-header">
         <div class="section-kicker">Pricing</div>
         <h2>Transparent starting prices</h2>
-        <p>Final price depends on size, condition and frequency. Contact us for a free quote based on your space.</p>
+        <p>Final pricing depends on size, condition, access and frequency. Contact us for a more accurate quote based on your space.</p>
       </div>
 
       <div class="pricing-grid">
         <div class="price-card">
           <div class="price-name">Standard Apartment Cleaning</div>
           <div class="price-value">from $120</div>
-          <div class="price-note">Studio / 1BR, light to normal condition, one-time visit.</div>
+          <div class="price-note">Studio or 1BR in light to normal condition.</div>
         </div>
 
         <div class="price-card">
           <div class="price-name">Deep Cleaning</div>
           <div class="price-value">from $180</div>
-          <div class="price-note">2BR+ or homes that haven’t been cleaned in a while.</div>
+          <div class="price-note">Best for spaces needing extra attention or detail.</div>
         </div>
 
         <div class="price-card">
           <div class="price-name">Move-out / Move-in</div>
           <div class="price-value">from $250</div>
-          <div class="price-note">Empty apartments / houses, ready for inspection.</div>
+          <div class="price-note">Vacant apartments or homes ready for walkthrough.</div>
         </div>
 
         <div class="price-card">
           <div class="price-name">Office & Small Business</div>
           <div class="price-value">from $200</div>
-          <div class="price-note">Depends on size, number of rooms and frequency.</div>
+          <div class="price-note">Depends on layout, traffic and frequency.</div>
         </div>
       </div>
 
       <p class="helper-text" style="margin-top:0.9rem;">
-        Have a different type of space or special request? Use the form below or call
-        <strong>(650) 918-7729</strong> for a custom quote.
+        Have a different type of job or special request? Call or text <strong>(650) 918-7729</strong> for a custom quote.
       </p>
+    </section>
+
+    <section id="areas">
+      <div class="section-header">
+        <div class="section-kicker">Service Area</div>
+        <h2>Proudly serving Bay Area clients</h2>
+        <p>Adding real city names helps both trust and local SEO. Expand this list if you serve more areas consistently.</p>
+      </div>
+
+      <div class="service-area-grid">
+        <div class="service-area-card">San Francisco</div>
+        <div class="service-area-card">San Bruno</div>
+        <div class="service-area-card">Daly City</div>
+        <div class="service-area-card">South San Francisco</div>
+        <div class="service-area-card">Millbrae</div>
+        <div class="service-area-card">Burlingame</div>
+        <div class="service-area-card">Pacifica</div>
+        <div class="service-area-card">San Mateo</div>
+      </div>
     </section>
 
     <section id="about">
       <div class="section-header">
         <div class="section-kicker">About</div>
         <h2>A reliable cleaning service you can trust</h2>
-        <p>We know it’s not easy to let someone into your home. That’s why we focus on trust, consistency and communication in every visit.</p>
+        <p>Letting someone into your home or workspace is a big deal. That is why we focus on communication, consistency and respect every visit.</p>
       </div>
 
       <div class="two-col">
         <div>
-          <p style="margin-bottom:0.8rem;">
-            Maby's Domestic Services has been helping families and professionals keep their spaces clean and organized for many years
-            across San Francisco, San Bruno, Daly City, South San Francisco and nearby Bay Area cities. We offer detailed, careful cleaning with a personal touch.
+          <p>
+            Maby's Domestic Services has helped families, renters, homeowners and professionals keep their spaces clean and organized across the San Francisco Bay Area for many years.
+            We focus on detailed cleaning, dependable service and care for every space we enter.
           </p>
+
           <ul class="list-columns">
             <li>Experienced and detail-oriented</li>
             <li>Respectful of your home and privacy</li>
-            <li>Flexible scheduling options</li>
-            <li>Apartments, houses and offices</li>
-            <li>Move-out and deep cleanings</li>
-            <li>Reliable and consistent service</li>
+            <li>Flexible appointment options</li>
+            <li>Apartments, homes and offices</li>
+            <li>Move-out and deep cleaning</li>
+            <li>Reliable recurring service</li>
           </ul>
         </div>
 
         <div>
           <div class="quote-box">
-            “The best compliment is when clients call us back again and again, and recommend us to their friends and neighbors.”
+            “The best compliment is when a client hires us again or recommends us to their family, neighbors or coworkers.”
             <strong>We appreciate every client and treat your space with care.</strong>
           </div>
         </div>
@@ -954,7 +1247,7 @@
       <div class="section-header">
         <div class="section-kicker">Reviews</div>
         <h2>What clients say</h2>
-        <p>Real feedback from clients who trusted us with their homes, apartments and office spaces.</p>
+        <p>Use real feedback, screenshots or direct review quotes whenever possible. Real proof always converts better than generic praise.</p>
       </div>
 
       <div class="review-grid">
@@ -988,44 +1281,58 @@
       <div class="section-header">
         <div class="section-kicker">Quote</div>
         <h2>Request your free quote</h2>
-        <p>Tell us about your home or office and we’ll get back to you with an estimate and possible dates.</p>
+        <p>Tell us about your space and preferred timing. The more details you share, the better your estimate will be.</p>
       </div>
 
       <div class="contact-layout">
-        <form action="mailto:mabisdomesticserv101@gmail.com" method="POST" enctype="text/plain">
-          <div>
-            <label for="name">Name</label>
-            <input id="name" name="Name" type="text" required placeholder="Your full name" />
+        <!-- Replace this email with the correct one -->
+        <form action="mailto:mabisdomescticsev101@gmail.com" method="POST" enctype="text/plain">
+          <div class="form-top">
+            <h3>Tell us what you need</h3>
+            <p>Include bedrooms, bathrooms, square footage if you know it, and whether the place is occupied or empty.</p>
           </div>
 
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="Email" type="email" required placeholder="you@example.com" />
-          </div>
+          <div class="form-grid">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="Name" type="text" required placeholder="Your full name" />
+            </div>
 
-          <div>
-            <label for="phone">Phone</label>
-            <input id="phone" name="Phone" type="tel" placeholder="(650) 000-0000" />
-          </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="Phone" type="tel" placeholder="(650) 000-0000" />
+            </div>
 
-          <div>
-            <label for="service">Type of service</label>
-            <select id="service" name="Service">
-              <option value="Standard apartment">Standard apartment cleaning</option>
-              <option value="Deep cleaning">Deep cleaning</option>
-              <option value="Move-out">Move-out / Move-in cleaning</option>
-              <option value="Office">Office cleaning</option>
-              <option value="Other">Other / Not sure yet</option>
-            </select>
-          </div>
+            <div class="full-span">
+              <label for="email">Email</label>
+              <input id="email" name="Email" type="email" required placeholder="you@example.com" />
+            </div>
 
-          <div>
-            <label for="details">Tell us about your space</label>
-            <textarea id="details" name="Details" placeholder="Approximate size, number of bedrooms/bathrooms, preferred dates, special requests..."></textarea>
+            <div>
+              <label for="service">Type of service</label>
+              <select id="service" name="Service">
+                <option value="Standard apartment">Standard apartment cleaning</option>
+                <option value="Deep cleaning">Deep cleaning</option>
+                <option value="Move-out">Move-out / Move-in cleaning</option>
+                <option value="Office">Office cleaning</option>
+                <option value="Recurring">Recurring service</option>
+                <option value="Other">Other / Not sure yet</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="city">City</label>
+              <input id="city" name="City" type="text" placeholder="San Bruno, San Francisco, Daly City..." />
+            </div>
+
+            <div class="full-span">
+              <label for="details">Tell us about your space</label>
+              <textarea id="details" name="Details" placeholder="Example: 2 bed / 1 bath apartment, move-out cleaning, empty unit, need service this Friday, oven and fridge included..."></textarea>
+            </div>
           </div>
 
           <button type="submit" class="btn btn-primary">Send quote request</button>
-          <p class="helper-text">By clicking “Send”, your email program may open with the details of your request.</p>
+          <p class="helper-text">This form uses your email app. For a more professional setup later, switch this to Formspree, Netlify Forms or a proper backend form.</p>
         </form>
 
         <aside class="contact-card" id="contact">
@@ -1035,13 +1342,18 @@
           </div>
 
           <div class="contact-item">
+            <span class="contact-label">Text message</span>
+            <span class="contact-value"><a href="sms:+16509187729">Text for fastest response</a></span>
+          </div>
+
+          <div class="contact-item">
             <span class="contact-label">Email</span>
             <span class="contact-value"><a href="mailto:mabisdomescticsev101@gmail.com">mabisdomescticsev101@gmail.com</a></span>
           </div>
 
           <div class="contact-item">
             <span class="contact-label">Service area</span>
-            <span class="contact-value">San Francisco, San Bruno, Daly City, South San Francisco and nearby Bay Area cities</span>
+            <span class="contact-value">San Francisco, San Bruno, Daly City, South San Francisco, Millbrae, Burlingame, Pacifica and nearby Bay Area cities</span>
           </div>
 
           <div class="contact-item">
@@ -1065,8 +1377,61 @@
     © <span id="year"></span> Maby's Domestic Services. All rights reserved.
   </footer>
 
+  <div class="mobile-bar" aria-label="Mobile quick actions">
+    <a class="mobile-call" href="tel:+16509187729">Call now</a>
+    <a class="mobile-text" href="sms:+16509187729">Text us</a>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+      <img id="lightboxImg" src="" alt="" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const galleryCards = document.querySelectorAll('.gallery-card');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    galleryCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const full = card.getAttribute('data-full');
+        const caption = card.getAttribute('data-caption') || '';
+        const img = card.querySelector('img');
+
+        lightboxImg.src = full;
+        lightboxImg.alt = img ? img.alt : 'Cleaning photo';
+        lightboxCaption.textContent = caption;
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
   </script>
 </body>
 </html>
