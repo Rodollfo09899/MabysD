@@ -71,18 +71,20 @@
 }
 
 .logo-img {
-  height: 60px;
+  height: 64px;
   width: auto;
   display: block;
+  object-fit: contain;
 }
-    .logo small {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: #777;
-      text-transform: none;
-      letter-spacing: normal;
-    }
+    
+.logo-text div {
+  font-size: 0.92rem;
+}
+
+.logo-text small {
+  font-size: 0.68rem;
+}
+
 
     .nav-links {
       display: flex;
@@ -785,7 +787,7 @@ label {
       cursor: pointer;
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 760px) {
       .hero,
       .two-col,
       .contact-layout {
@@ -918,10 +920,9 @@ label {
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header>
-<div class="logo">
-  <img src="logos/Logo1.png" alt="Maby's Domestic Services Logo" class="logo1-img">
-</div>
+ <div class="logo">
+  <img src="logos/Logo1.png" alt="Maby's Domestic Services Logo" class="logo1-img" />
+  <div class="logo-text">
     <div>Maby's Domestic Services</div>
     <small>San Francisco Bay Area • Since 2005</small>
   </div>
