@@ -1287,53 +1287,56 @@
       <div class="contact-layout">
         <!-- Replace this email with the correct one -->
         <form action="https://formspree.io/f/mvzwvnwd" method="POST">
-          <div class="form-top">
-            <h3>Tell us what you need</h3>
-            <p>Include bedrooms, bathrooms, square footage if you know it, and whether the place is occupied or empty.</p>
-          </div>
+  <div class="form-top">
+    <h3>Tell us what you need</h3>
+    <p>Include bedrooms, bathrooms, square footage if you know it, and whether the place is occupied or empty.</p>
+  </div>
 
-          <div class="form-grid">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="Name" type="text" required placeholder="Your full name" />
-            </div>
+  <input type="hidden" name="_subject" value="New quote request - Maby's Domestic Services">
+  <input type="hidden" name="_captcha" value="false">
 
-            <div>
-              <label for="phone">Phone</label>
-              <input id="phone" name="Phone" type="tel" placeholder="(650) 000-0000" />
-            </div>
+  <div class="form-grid">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" name="Name" type="text" required placeholder="Your full name" />
+    </div>
 
-            <div class="full-span">
-              <label for="email">Email</label>
-              <input id="email" name="Email" type="email" required placeholder="you@example.com" />
-            </div>
+    <div>
+      <label for="phone">Phone</label>
+      <input id="phone" name="Phone" type="tel" placeholder="(650) 000-0000" />
+    </div>
 
-            <div>
-              <label for="service">Type of service</label>
-              <select id="service" name="Service">
-                <option value="Standard apartment">Standard apartment cleaning</option>
-                <option value="Deep cleaning">Deep cleaning</option>
-                <option value="Move-out">Move-out / Move-in cleaning</option>
-                <option value="Office">Office cleaning</option>
-                <option value="Recurring">Recurring service</option>
-                <option value="Other">Other / Not sure yet</option>
-              </select>
-            </div>
+    <div class="full-span">
+      <label for="email">Email</label>
+      <input id="email" name="Email" type="email" required placeholder="you@example.com" />
+    </div>
 
-            <div>
-              <label for="city">City</label>
-              <input id="city" name="City" type="text" placeholder="San Bruno, San Francisco, Daly City..." />
-            </div>
+    <div>
+      <label for="service">Type of service</label>
+      <select id="service" name="Service">
+        <option value="Standard apartment">Standard apartment cleaning</option>
+        <option value="Deep cleaning">Deep cleaning</option>
+        <option value="Move-out">Move-out / Move-in cleaning</option>
+        <option value="Office">Office cleaning</option>
+        <option value="Recurring">Recurring service</option>
+        <option value="Other">Other / Not sure yet</option>
+      </select>
+    </div>
 
-            <div class="full-span">
-              <label for="details">Tell us about your space</label>
-              <textarea id="details" name="Details" placeholder="Example: 2 bed / 1 bath apartment, move-out cleaning, empty unit, need service this Friday, oven and fridge included..."></textarea>
-            </div>
-          </div>
+    <div>
+      <label for="city">City</label>
+      <input id="city" name="City" type="text" placeholder="San Bruno, San Francisco, Daly City..." />
+    </div>
 
-          <button type="submit" class="btn btn-primary">Send quote request</button>
-          <p class="helper-text">This form uses your email app. For a more professional setup later, switch this to Formspree, Netlify Forms or a proper backend form.</p>
-        </form>
+    <div class="full-span">
+      <label for="details">Tell us about your space</label>
+      <textarea id="details" name="Details" placeholder="Example: 2 bed / 1 bath apartment, move-out cleaning, empty unit, need service this Friday, oven and fridge included..."></textarea>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Send quote request</button>
+  <p class="helper-text">We’ll review your request and get back to you as soon as possible.</p>
+</form>
 
         <aside class="contact-card" id="contact">
           <div class="contact-item">
