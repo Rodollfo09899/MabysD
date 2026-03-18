@@ -430,25 +430,24 @@ label { color: #4b5565; }
   font-weight: 700;
   align-self: flex-start;
 }
+ .card p { font-size: 0.92rem; color: var(--muted); }
 
-    .card p { font-size: 0.92rem; color: #555; }
+.card ul {
+  list-style: none;
+  font-size: 0.86rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.3rem;
+  margin-top: 0.3rem;
+}
 
-    .card ul {
-      list-style: none;
-      font-size: 0.86rem;
-      color: #555;
-      display: grid;
-      gap: 0.3rem;
-      margin-top: 0.3rem;
-    }
-
-    .card ul li::before {
-      content: "•";
-      margin-right: 0.4rem;
-      color: var(--accent);
-      font-weight: 900;
-    }
-
+label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #4b5565;
+  display: block;
+  margin-bottom: 0.22rem;
+}
     .gallery-card {
       overflow: hidden;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -563,13 +562,12 @@ label { color: #4b5565; }
       color: var(--muted);
       gap: 0.8rem;
     }
-
-    .stars {
-      color: #fdd835;
-      letter-spacing: 0.04em;
-      font-size: 0.9rem;
-      white-space: nowrap;
-    }
+.stars {
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
 
     .price-card {
       padding: 1.4rem 1.2rem 1.3rem;
@@ -1298,7 +1296,7 @@ label { color: #4b5565; }
 
   <input type="hidden" name="_subject" value="New quote request - Maby's Domestic Services">
   <input type="hidden" name="_captcha" value="false">
-  <input type="hidden"  value="https://www.mabisdomesticservice.com/thank-you.html">        
+  <input type="hidden" name="_next"  value="https://www.mabisdomesticservice.com/thank-you.html">        
 
   <div class="form-grid">
     <div>
